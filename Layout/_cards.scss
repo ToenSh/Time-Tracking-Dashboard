@@ -1,0 +1,120 @@
+.card {
+  background-color: var(--Dark-blue);
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  @media (min-width: 1250px) {
+    min-width: 100%;
+    margin-bottom: 0;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.5rem;
+    padding: 1.75rem 1rem 1.75rem 1.5rem;
+    border-radius: 1rem 1rem 0.8rem 0.8rem;
+    background-color: var(--Dark-blue);
+    @media (min-width: 1250px) {
+      grid-template-rows: repeat(3, 1fr);
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+  }
+  &__info:hover {
+    background-color: rgb(42, 46, 107);
+    cursor: pointer;
+  }
+
+  &__header {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    @media (min-width: 1250px) {
+      align-self: center;
+    }
+  }
+
+  &__current-hrs {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 300;
+    @media (min-width: 1250px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__previous-hrs {
+    color: var(--Desaturated-blue);
+    font-size: 0.9rem;
+    font-weight: 400;
+    justify-self: right;
+    align-self: center;
+
+    @media (min-width: 1250px) {
+      grid-row: 3;
+      grid-column: 1 / -1;
+      justify-self: left;
+    }
+  }
+}
+.more-options {
+  cursor: pointer;
+}
+.more-options {
+  align-self: center;
+  justify-self: right;
+}
+
+.card.work {
+  background-color: var(--Work-color);
+  background-image: url(./images/icon-work.svg);
+}
+.card.play {
+  background-color: var(--Play-color);
+  background-image: url(./images/icon-play.svg);
+}
+.card.study {
+  background-color: var(--Study-color);
+  background-image: url(./images/icon-study.svg);
+}
+.card.exercise {
+  background-color: var(--Excercise-color);
+  background-image: url(./images/icon-exercise.svg);
+}
+.card.social {
+  background-color: var(--Social-color);
+  background-image: url(./images/icon-social.svg);
+}
+.card.self-care {
+  background-color: var(--Self-care-color);
+  background-image: url(./images/icon-self-care.svg);
+}
+.card.work,
+.card.exercise,
+.card.social,
+.card.study,
+.card.play,
+.card.self-care {
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.card-background {
+  height: 45px;
+  @media (min-width: 1250px) {
+    height: 35px;
+  }
+}
+
+.profile,
+.card.work,
+.card.play,
+.card.study {
+  align-self: flex-end;
+}
+
+.sort,
+.card.exercise,
+.card.social,
+.card.self-care {
+  align-self: flex-start;
+}

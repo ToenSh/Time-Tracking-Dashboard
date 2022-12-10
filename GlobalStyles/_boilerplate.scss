@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--Very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 3rem 0;
+  max-width: 90%;
+
+  @media (min-width: 1250px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    place-items: center;
+    max-width: 55%;
+    padding: 0;
+  }
+}
