@@ -11,7 +11,7 @@ function generateDefaultData() {
     .then((data) => data.json())
     .then((data) => {
       currentHrs.forEach((hr, i) => {
-        hr.innerHTML = data[i].timeframes.weekly.current + "hrs";
+        hr.innerHTML = data[i].timeframes.weekly.current + "hrs";  //here's the only thing that changes between the three functions, weekly should become daily and then monthly
       });
       prevHrs.forEach((hr, i) => {
         hr.innerHTML =
